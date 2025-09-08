@@ -1,0 +1,66 @@
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: nginx-dev
+    volumes:
+      - ./Nginx/prod-nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./shared-volumes/certbot-www:/var/www/certbot
+      - ./shared-volumes/letsencrypt:/etc/letsencrypt:ro
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - svelte
+      - pocketbase
+  certbot-init:
+    image: certbot/certbot:latest
+    container_name: certbot-init-manual
+    entrypoint: ["/bin/sh", "-c"]
+    command: >
+      "certbot certonly --webroot -w /var/www/certbot -d iparisator.com -d www.iparisator.com --email scriptpilot47@gmail.com --agree-tos --non-interactive --keep-until-expiring"
+    volumes:
+      - ./shared-volumes/certbot-www:/var/www/certbot
+      - ./shared-volumes/letsencrypt:/etc/letsencrypt
+    depends_on:
+      - nginx
+    restart: "no"
+    profiles:
+      - "manual"
+      # only run manually
+  certbot-renewal:
+    image: certbot/certbot:latest
+    container_name: certbot-renewal-prod
+    entrypoint: ["/bin/sh", "-c"]
+    command: |
+      "while :; do
+        certbot renew --webroot -w /var/www/certbot
+        sleep 12h;
+      done"
+    volumes:
+      - ./shared-volumes/certbot-www:/var/www/certbot
+      - ./shared-volumes/letsencrypt:/etc/letsencrypt
+    depends_on:
+      - nginx
+    restart: "unless-stopped"
+  pocketbase:
+    image: pocketbase:prod
+    container_name: pocketbase-prod
+    build:
+      context: ./PocketBase
+      target: prod
+    volumes:
+      - ./PocketBase/production_DB/pb_data:/app/pb_data
+      - ./PocketBase/pb_migrations:/app/pb_migrations
+      - ./PocketBase/production_DB/entry.sh:/entry.sh:ro
+    entrypoint: ["/entry.sh"]
+    #ports:
+      #- "8090:8090"
+  svelte:
+    image: svelte:prod
+    container_name: svelte-prod
+    build:
+      context: ./Svelte
+      target: prod
+    volumes: []
+    ports:
+      - "3000:3000"

@@ -1,0 +1,31 @@
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: nginx-dev
+    volumes:
+      - ./Nginx/dev-nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "80:80"
+    depends_on:
+      - svelte
+      - pocketbase
+  pocketbase:
+    image: pocketbase:dev
+    container_name: pocketbase-dev
+    build:
+      context: ./PocketBase
+      target: dev
+    volumes:
+      - ./PocketBase/dev_DB/pb_data:/app/pb_data
+      - ./PocketBase/pb_migrations:/app/pb_migrations
+    ports:
+      - "8090:8090"
+  svelte:
+    image: svelte:dev
+    container_name: svelte-dev
+    build:
+      context: ./Svelte
+      target: dev
+    volumes:
+      - ./Svelte:/app
+      - /app/node_modules
