@@ -3,6 +3,7 @@
 PocketBase/production_DB
 !PocketBase/production_DB/entry.sh
 PocketBase/dev_DB
+!PocketBase/dev_DB/.afk
 shared-volumes/letsencrypt
 !shared-volumes/letsencrypt/.afk
 shared-volumes/certbot-www
