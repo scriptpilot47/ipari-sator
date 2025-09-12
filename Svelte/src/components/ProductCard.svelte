@@ -8,7 +8,7 @@
 <div class="card card-sm md:card-lg bg-base-200 w-72 sm:w-96 shadow-sm">
   <figure>
     <img
-      src="https://api.kismetal.hu/public/1/items/satrak/haz/gallery/gallery_01_km_uth_000.jpg"
+      src="https://expresstents.co.uk/wp-content/uploads/2023/06/GS203216.jpg"
       alt="" />
   </figure>
   <div class="card-body">
