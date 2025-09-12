@@ -101,3 +101,5 @@ docker compose up nginx certbot-init
 docker compose down -v
 docker compose -f docker-compose.prod.yaml up -d
 ```
+
+_don't forget to comment out the SSL lines from the `Nginx/prod.nginx.conf` file first, since the certs are not there yet and nginx will exit with code 1, befor certbot starts_
