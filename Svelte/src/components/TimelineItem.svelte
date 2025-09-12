@@ -11,7 +11,7 @@
   </script>
   <li>
     <hr class={`${first ? 'hidden' : ''} ${filled ? 'bg-primary' : ''}`}/>
-    <div class={`${position === 'start' ? 'timeline-start' : 'timeline-end'} timeline-box text-xl my-40`}>{title}</div>
+    <div class={`${position === 'start' ? 'timeline-start' : 'timeline-end'} timeline-box text-xl my-40 ${filled ? 'text-primary border-primary' : ''}`}>{title}</div>
     <div class="timeline-middle">
       <svg
         xmlns="http://www.w3.org/2000/svg"
