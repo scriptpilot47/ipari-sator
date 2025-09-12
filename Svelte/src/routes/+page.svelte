@@ -1,1 +1,6 @@
-<h1 class="text-5xl bold">SOON</h1>
+<script>
+    import Legend from "../components/Legend.svelte";
+</script>
+<div class="flex">
+    <Legend/>
+</div>
