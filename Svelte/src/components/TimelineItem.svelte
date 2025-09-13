@@ -2,16 +2,17 @@
       interface Props {
         filled?: boolean;
         title: string;
+        description: string;
         first: boolean;
         last: boolean;
         position: string;
         }
-    let { filled = false, title, first = false, last = false, position}: Props = $props();
+    let { filled = false, title, first = false, last = false, position, description}: Props = $props();
 
   </script>
   <li>
     <hr class={`${first ? 'hidden' : ''} ${filled ? 'bg-primary' : ''}`}/>
-    <div class={`${position === 'start' ? 'timeline-start' : 'timeline-end'} timeline-box text-xl my-40 ${filled ? 'text-primary border-primary' : ''}`}>{title}</div>
+    <div class={`${position === 'start' ? 'timeline-start' : 'timeline-end'} timeline-box text-lg sm:text-xl font-bold my-40 max-w-70 ${filled ? 'text-primary border-primary' : ''}`}>{title} <p class="text-white font-normal block sm:block text-xs sm:text-md md:text-lg">{description}</p></div>
     <div class="timeline-middle">
       <svg
         xmlns="http://www.w3.org/2000/svg"

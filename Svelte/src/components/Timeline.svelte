@@ -4,12 +4,22 @@
     // Create a store to hold the scroll position
     let scrollPosition = $state(0);
     
-    const timelineStartPoint = 1000;
+    let timelineStartPoint = $state(1000);
 
     // Track scroll event on window
     import { onMount } from 'svelte';
 
     onMount(() => {
+        let screenWidth = window.innerWidth;
+
+        if (screenWidth > 767 && screenWidth < 1535) {
+          timelineStartPoint = 800;
+        } else if (screenWidth > 1535) {
+          timelineStartPoint = 1000;
+        } else {
+          timelineStartPoint = 750
+        }
+
         const handleScroll = (event: Event) => {
                 scrollPosition = window.scrollY;
             };
@@ -25,11 +35,11 @@
 
   <div class="p-8 bg-base-200">
     <h1 class="text-center text-bold text-2xl md:text-4xl font-bold text-base-content mt-10">Rendeles menete</h1>
-<p>Scroll Position: {scrollPosition}</p>
+<!-- <p>Scroll Position: {scrollPosition}</p> -->
 <ul class="timeline timeline-vertical">
-    <TimelineItem title={'Rendeles leadasa'} filled={scrollPosition >  timelineStartPoint ? true : false}  position={'start'} first={true} last={false}/>
-    <TimelineItem title={'Beszerzes megkezdese'} filled={scrollPosition > timelineStartPoint + 350 ? true : false} position={'end'} first={false} last={false}/>
-    <TimelineItem title={'Termek atveheto'} filled={scrollPosition > timelineStartPoint + 800 ? true : false} position={'start'} first={false} last={false}/>
-    <TimelineItem title={'Kiszallitas es osszeszereles (opcionalis)'} filled={scrollPosition > timelineStartPoint + 1200 ? true : false} position={'end'} first={false} last={true}/>
+    <TimelineItem title={'Rendeles leadasa'} description={'Add le rendelesedet az altalat valasztott termekre. Ha meg kerdesed maradt, nyugodtan telefonalj kollegainknak, akik segitenek a megfelelo sator kivalasztasaban.'} filled={scrollPosition >  timelineStartPoint ? true : false}  position={'start'} first={true} last={false}/>
+    <TimelineItem title={'Beszerzes megkezdese'} description='A visszaigazolo email erkezese utan nincs mas dolgod mint varni, amig mi beszerezzuk a termeket' filled={scrollPosition > timelineStartPoint + 400 ? true : false} position={'end'} first={false} last={false}/>
+    <TimelineItem title={'Termek atveheto'} description='Amint beerkezett hozzank, ertesitunk emailben es SMS-ben is.' filled={scrollPosition > timelineStartPoint + 850 ? true : false} position={'start'} first={false} last={false}/>
+    <TimelineItem title={'Kiszallitas es osszeszereles (opcionalis)'} description='Amennyiben ezt az opciot is kerted a termek rendelesnel, csapatunk az elore egyeztetett idopontban kiszallitja es osszerakja a satrat.' filled={scrollPosition > timelineStartPoint + 1300 ? true : false} position={'end'} first={false} last={true}/>
 </ul>
   </div>

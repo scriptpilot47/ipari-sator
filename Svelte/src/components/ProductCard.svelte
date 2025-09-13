@@ -2,8 +2,9 @@
       interface Props {
         popular?: boolean;
         title: string;
+        description: string;
         }
-    let { popular = false, title }: Props = $props();
+    let { popular = false, title, description }: Props = $props();
 </script>
 <div class="card card-sm md:card-lg bg-base-200 w-72 sm:w-96 shadow-sm">
   <figure>
@@ -16,7 +17,7 @@
       {title}
       <div class={`badge badge-primary ${popular ? 'block' : 'hidden'} badge-sm sm:badge-md`}>NEPSZERU</div>
     </h2>
-    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+    <p>{description}</p>
     <div class="card-actions justify-start">
         <div class="btn btn-accent uppercase">
             megtekint
