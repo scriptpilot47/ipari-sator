@@ -1,0 +1,47 @@
+<script lang="ts">
+	interface Props { images_list: string[]; title:string; }
+	let { images_list, title }: Props = $props();
+
+	// wrap helpers
+	const prevIdx = (i: number) => (i - 1 + images_list.length) % images_list.length;
+	const nextIdx = (i: number) => (i + 1) % images_list.length;
+
+	function goToSlide(idx: number) {
+		const id = `slide${idx + 1}`;
+		const el = document.getElementById(id);
+		const container = el?.closest<HTMLElement>('.carousel');
+		if (el && container) {
+			container.scrollTo({ left: el.offsetLeft, behavior: 'smooth' });
+			// Optional: update URL without scrolling the page
+			history.replaceState(null, '', `#${id}`);
+		}
+	}
+</script>
+
+<div class="max-w-150 mx-auto lg:mx-0">
+	<div class="breadcrumbs text-sm">
+  <ul>
+    <li class="underline"><a href="/products">Termekek</a></li>
+    <li class="underline">{title}</li>
+  </ul>
+</div>
+	<div class="carousel w-full">
+		{#each images_list as image, i}
+			<div id={`slide${i + 1}`} class="carousel-item relative w-full">
+				<img src={image} class="w-full rounded-sm" alt={`Slide ${i + 1}`} />
+				<div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+					<a
+						href={`#slide${prevIdx(i) + 1}`}
+						class="btn btn-circle"
+						onclick={(e) => { e.preventDefault(); goToSlide(prevIdx(i)); }}
+					>❮</a>
+					<a
+						href={`#slide${nextIdx(i) + 1}`}
+						class="btn btn-circle"
+						onclick={(e) => { e.preventDefault(); goToSlide(nextIdx(i)); }}
+					>❯</a>
+				</div>
+			</div>
+		{/each}
+	</div>
+</div>

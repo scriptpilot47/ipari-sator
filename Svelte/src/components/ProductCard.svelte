@@ -10,14 +10,15 @@
     title: string;
     description: string;
     id: string
+    img_url: string
   }
   
-  let { popular = false, title, description, id }: Props = $props();
+  let { popular = false, title, description, id, img_url }: Props = $props();
 </script>
 <button onclick={goToAbout} class="card card-sm md:card-lg bg-base-200 w-72 sm:w-96 shadow-sm min-h-1 md:min-h-120 hover:cursor-pointer">
   <figure>
     <img
-      src="https://expresstents.co.uk/wp-content/uploads/2023/06/GS203216.jpg"
+      src={img_url}
       alt="" />
   </figure>
   <div class="card-body">

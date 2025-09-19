@@ -13,8 +13,9 @@
       {#if data?.products}
         {#each data.products as product}
           <ProductCard
+          img_url={product.cover_image_url}
           title={product.title}
-          description={product.description}
+          description={product.description_short}
           popular={product.is_popular}
           id={product.id}
           />
