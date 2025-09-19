@@ -1,5 +1,7 @@
   <script lang="ts">
+    import { text } from "@sveltejs/kit";
     import TimelineItem from "./TimelineItem.svelte";
+    import Title from "./Title.svelte";
     
     // Create a store to hold the scroll position
     let scrollPosition = $state(0);
@@ -34,7 +36,7 @@
 </script>
 
   <div class="p-8 bg-base-200">
-    <h1 class="text-center text-bold text-2xl md:text-4xl font-bold text-base-content mt-10">Rendeles menete</h1>
+    <Title text="Rendeles menete" extra="mt-10"/>
 <!-- <p>Scroll Position: {scrollPosition}</p> -->
 <ul class="timeline timeline-vertical">
     <TimelineItem title={'Rendeles leadasa'} description={'Add le rendelesedet az altalat valasztott termekre. Ha meg kerdesed maradt, nyugodtan telefonalj kollegainknak, akik segitenek a megfelelo sator kivalasztasaban.'} filled={scrollPosition >  timelineStartPoint ? true : false}  position={'start'} first={true} last={false}/>

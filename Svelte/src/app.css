@@ -1,4 +1,7 @@
 @import 'tailwindcss';
+@theme {
+  --breakpoint-3xl: 1920px; /* your custom one */
+}
 @plugin "daisyui";
 @plugin "daisyui/theme" {
   name: "light";
