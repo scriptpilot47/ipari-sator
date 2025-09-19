@@ -6,7 +6,7 @@
         }
     let { popular = false, title, description }: Props = $props();
 </script>
-<div class="card card-sm md:card-lg bg-base-200 w-72 sm:w-96 shadow-sm">
+<div class="card card-sm md:card-lg bg-base-200 w-72 sm:w-96 shadow-sm min-h-1 md:min-h-120">
   <figure>
     <img
       src="https://expresstents.co.uk/wp-content/uploads/2023/06/GS203216.jpg"

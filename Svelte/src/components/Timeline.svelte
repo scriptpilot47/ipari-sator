@@ -13,7 +13,7 @@
         let screenWidth = window.innerWidth;
 
         if (screenWidth > 767 && screenWidth < 1535) {
-          timelineStartPoint = 800;
+          timelineStartPoint = 1150;
         } else if (screenWidth > 1535) {
           timelineStartPoint = 1000;
         } else {

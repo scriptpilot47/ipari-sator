@@ -1,5 +1,6 @@
 .env
 .env/*
+*.env
 PocketBase/production_DB
 !PocketBase/production_DB/entry.sh
 PocketBase/dev_DB
