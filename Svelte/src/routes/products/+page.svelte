@@ -9,7 +9,7 @@
 </script>
 <div class="p-8">
     <Title text="Osszes termekunk" extra=''/>
-    <div class="md:mt-5 flex flex-col md:flex-row items-center justify-center md:flex-wrap gap-5 3xl:max-w-[1920px] mx-auto">
+    <div class="md:mt-5 flex flex-col md:flex-row items-center justify-center md:flex-wrap gap-20 md:gap-10 3xl:max-w-[1920px] mx-auto">
       {#if data?.products}
         {#each data.products as product}
           <ProductCard
