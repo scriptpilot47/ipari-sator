@@ -3,8 +3,7 @@
 	import favicon from '$lib/assets/favicon.svg';
   import Logo from '../components/Logo.svelte';
   import Footer from '../components/Footer.svelte';
-
-  // #TODO update sidebar active url to primary color
+	import { page } from '$app/state';
 
 	let { children } = $props();
 </script>
@@ -41,10 +40,11 @@
       <div class="hidden flex-none lg:block">
         <ul class="menu menu-horizontal text-primary-content text-lg">
           <!-- Navbar menu content here -->
-      	<li><a href="/">Kezdőlap</a></li>
-      	<li><a href="/products">Termékek</a></li>
-      	<li><a href="/">Arak</a></li>
-      	<li><a href="/contact">Kapcsolat</a></li>
+      	<li><a href="/" class={`${page.url.pathname === '/' ? 'underline underline-offset-5 decoration-2' : ''} active:!bg-transparent focus:!bg-transparent active:!text-black hover:!bg-transparent`}>Kezdőlap</a></li>
+      	<li><a href="/products"class={`${page.url.pathname === '/products' ? 'underline underline-offset-5 decoration-2' : ''} active:!bg-transparent focus:!bg-transparent active:!text-black hover:!bg-transparent`}>Termékek</a></li>
+      	<li><a href="/prices"class={`${page.url.pathname === '/prices' ? 'underline underline-offset-5 decoration-2' : ''} active:!bg-transparent focus:!bg-transparent active:!text-black hover:!bg-transparent`}>Arak</a></li>
+        <li><a href="/blog"class={`${page.url.pathname === '/blog' ? 'underline underline-offset-5 decoration-2' : ''} active:!bg-transparent focus:!bg-transparent active:!text-black hover:!bg-transparent`}>Blog</a></li>
+      	<li><a href="/contact"class={`${page.url.pathname === '/contact' ? 'underline underline-offset-5 decoration-2' : ''} active:!bg-transparent focus:!bg-transparent active:!text-black hover:!bg-transparent`}>Kapcsolat</a></li>
         </ul>
       </div>
     </div>
@@ -57,10 +57,11 @@
     <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="menu bg-base-200 min-h-full w-80 px-4 py-8 text-2xl">
       <!-- Sidebar content here -->
-      	<li><a href="/">Kezdőlap</a></li>
-      	<li><a href="/products">Termékek</a></li>
-      	<li><a href="/">Arak</a></li>
-      	<li><a href="/contact">Kapcsolat</a></li>
+      	<li><a href="/" class={`${page.url.pathname === '/' ? 'text-primary' : ''} active:!bg-transparent`}>Kezdőlap</a></li>
+      	<li><a href="/products"class={`${page.url.pathname === '/products' ? 'text-primary' : ''} active:!bg-transparent`}>Termékek</a></li>
+      	<li><a href="/prices"class={`${page.url.pathname === '/prices' ? 'text-primary' : ''} active:!bg-transparent`}>Arak</a></li>
+        <li><a href="/blog"class={`${page.url.pathname === '/blog' ? 'text-primary' : ''} active:!bg-transparent`}>Blog</a></li>
+      	<li><a href="/contact"class={`${page.url.pathname === '/contact' ? 'text-primary' : ''} active:!bg-transparent`}>Kapcsolat</a></li>
     </ul>
   </div>
 </div>
