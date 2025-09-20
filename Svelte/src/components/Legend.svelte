@@ -1,5 +1,26 @@
+<script>
+  import { onMount } from "svelte";
+  import LegendSkeleton from "./Skeletons/LegendSkeleton.svelte";
+
+  // skeleton logic
+  let loaded = $state(false);
+  let imageRef;
+
+  function onLoad() {
+    loaded = true;
+  }
+
+  onMount(() => {
+    if (imageRef?.complete) {
+      loaded = true;
+    }
+  });
+</script>
 <section class="relative w-full h-[221px] sm:h-[300px] md:h-[400px] lg:h-[600px] block 2xl:flex 2xl:mt-20 bg-base-200">
-  <img src="legend.png" alt="Legend" class="w-full 2xl:w-[1100px] h-full object-cover" />
+  {#if !loaded}
+  <LegendSkeleton/>
+  {/if}
+  <img src="legend.png" alt="Legend" class={`w-full 2xl:w-[1100px] h-full object-cover ${loaded ? '' : 'hidden'}`} bind:this={imageRef} onload={onLoad} />
   <div class="absolute 2xl:relative inset-0 bg-black/10 2xl:bg-black/0 flex 2xl:flex-col items-start justify-end p-6 sm:p-10 lg:p-25">
     <h1 class="text-[#eeeeee] 2xl:text-base-content text-2xl sm:text-4xl md:text-5xl font-bold text-right 2xl:text-left leading-tight">
       FOLYAMATOS<br>VEDELEM<br />NYUJT
