@@ -17,7 +17,7 @@
     <!-- Navbar -->
     <div class="navbar bg-primary w-full border-b-3 border-solid border-[#ecf9ff]">
       <div class="flex-none lg:hidden">
-        <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost">
+        <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost hover:!bg-transparent">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
