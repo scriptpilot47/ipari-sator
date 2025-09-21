@@ -6,6 +6,7 @@ services:
       - ./Nginx/prod-nginx.conf:/etc/nginx/nginx.conf:ro
       - ./shared-volumes/certbot-www:/var/www/certbot
       - ./shared-volumes/letsencrypt:/etc/letsencrypt:ro
+      - ./images:/srv/images
     ports:
       - "80:80"
       - "443:443"
