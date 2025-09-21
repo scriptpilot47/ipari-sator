@@ -1,4 +1,4 @@
-FROM alpine:latest AS base
+FROM alpine:3.22 AS base
 
 ARG PB_VERSION=0.29.2
 ARG PB_ARCH=amd64

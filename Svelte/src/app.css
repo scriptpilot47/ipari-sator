@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
 @import 'tailwindcss';
 @theme {
   --breakpoint-3xl: 1920px; /* your custom one */
@@ -80,4 +81,10 @@
   --border: 1px;
   --depth: 1;
   --noise: 0;
+}
+
+.caveat-brush-regular {
+  font-family: "Caveat Brush", cursive;
+  font-weight: 400;
+  font-style: normal;
 }

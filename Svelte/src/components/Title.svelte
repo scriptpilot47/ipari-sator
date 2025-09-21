@@ -1,7 +1,7 @@
 <script lang="ts">
     interface Props {
-        text?: string;
-        extra: string;
+        text: string;
+        extra?: string;
     }
     let { text, extra = ''}: Props = $props();
 </script>
