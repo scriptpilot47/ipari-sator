@@ -27,6 +27,12 @@
 			<ImageViewer images_list={data.details.product_images} title={data.details.title} />
 			<div class="flex flex-col pb-5 lg:mt-11">
 				<h1 class="text-primary text-4xl">{data.details.title}</h1>
+				{#if data.details.is_sale}
+				<h1 class="text-2xl line-through text-red-500">
+					{data.details.sale_original_price.toLocaleString('hu-HU')}
+					<span class="font-normal italic">{' Ft. + afa'}</span>
+				</h1>
+				{/if}
 				<h1 class="text-2xl">
 					{data.details.price_net_huf.toLocaleString('hu-HU')}
 					<span class="font-normal italic">{' Ft. + afa'}</span>

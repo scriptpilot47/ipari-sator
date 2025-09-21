@@ -17,7 +17,10 @@
           title={product.title}
           description={product.description_short}
           popular={product.is_popular}
+          sale={product.is_sale}
           id={product.id}
+          price={product.price_net_huf}
+          sale_og_price={product.sale_original_price}
           />
         {/each}
       {/if}

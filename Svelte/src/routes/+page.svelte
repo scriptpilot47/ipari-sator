@@ -13,6 +13,8 @@
     <Legend/>
     <Quickproducts data={data}/>
     <Timeline/>
-   <ContactUs /> 
+    <ContactUs /> 
+    <div class="mt-40">
     <BlogAll  data={data}/>
+    </div>
 </div>

@@ -46,7 +46,8 @@
 	:global(.markdown h2) {
 		font-size: 24px;
 		font-weight: bold;
-		margin: 16px 0
+		margin-top: 48px;
+		margin-bottom: 16px;
 	}
 	:global(.markdown p) {
 		font-size: 18px;
