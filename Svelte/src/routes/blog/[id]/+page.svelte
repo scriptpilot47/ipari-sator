@@ -1,22 +1,31 @@
 <script lang="ts">
 	import type { PageProps } from './$types';
-	import DOMPurify from 'dompurify';
 	let { data }: PageProps = $props();
+	import ArticleSkeleton from '../../../components/Skeletons/ArticleSkeleton.svelte';
+	import { onMount } from 'svelte';
 	let safeHtml: string = $state('');
 
 	interface htmlData {
 		html: string;
 	}
-	$effect(() => {
-		if (typeof data.html === 'string') {
-			safeHtml = DOMPurify.sanitize(data.html);
-			console.log(data.html);
+
+
+	// skeleton logic
+	let loaded = $state(false);
+	let imageRef;
+
+	function onLoad() {
+		loaded = true;
+	}
+
+	onMount(() => {
+		if (imageRef?.complete) {
+			loaded = true;
 		}
 	});
 </script>
 
 <div class="max-w-220 mx-auto py-8">
-	{#if data}
 	<div class="flex flex-col">
 		<div class="breadcrumbs text-sm mb-8">
 			<ul>
@@ -33,14 +42,17 @@
 		</div>
 		<h1 class="text-5xl caveat-brush-regular mb-4">{data.title}</h1>
 		<div class="flex items-center mb-8"> <img src="https://randomuser.me/api/portraits/men/18.jpg" alt="Nagy Janos" class="w-12 h-12 rounded-full mr-4 object-cover"> <div> <p class="font-semibold text-gray-900 dark:text-white">Nagy Janos</p> <p class="text-gray-600 dark:text-gray-400">Ügyvezető</p> </div> </div>
-		<img src={data.artwork} alt="" class="w-full h-auto max-h-[480px] rounded-xl mb-10 object-cover"/>
+		<img src={data.artwork} bind:this={imageRef} onload={onLoad}
+		 alt="" class={`w-full h-auto max-h-[480px] rounded-xl mb-10 object-cover ${loaded ? '' : 'hidden'}`}/>
+		 {#if !loaded}
+		<div class="w-full max-w-220 mx-auto">
+		<ArticleSkeleton />
+		</div>
+		 {/if}
 		<div class="markdown">
-			{@html safeHtml}
+			{@html data.safeHtml}
 		</div>
 	</div>
-	{:else}
-		<div class="mt-10 flex gap-10 pl-8"></div>
-	{/if}
 </div>
 <style>
 	:global(.markdown h2) {

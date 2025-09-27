@@ -12,7 +12,7 @@
   </script>
   <li>
     <hr class={`${first ? 'hidden' : ''} ${filled ? 'bg-primary' : ''}`}/>
-    <div class={`${position === 'start' ? 'timeline-start' : 'timeline-end'} timeline-box text-lg sm:text-xl font-bold my-40 max-w-70 ${filled ? 'text-primary border-primary' : ''}`}>{title} <p class="text-white font-normal block sm:block text-xs sm:text-md md:text-lg">{description}</p></div>
+    <div class={`${position === 'start' ? 'timeline-start' : 'timeline-end'} timeline-box text-lg sm:text-xl font-bold my-10 max-w-70 ${filled ? 'text-primary border-primary' : ''}`}>{title} <p class="text-white font-normal block sm:block text-xs sm:text-md md:text-lg">{description}</p></div>
     <div class="timeline-middle">
       <svg
         xmlns="http://www.w3.org/2000/svg"

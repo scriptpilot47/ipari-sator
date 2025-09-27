@@ -1,0 +1,1 @@
+<div class="skeleton mb-10 h-[480px] max-h-[480px] w-full rounded-xl object-cover"></div>

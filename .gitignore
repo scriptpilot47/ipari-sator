@@ -11,3 +11,4 @@ shared-volumes/certbot-www
 !shared-volumes/certbot-www/.afk
 images/*
 !images/.afk
+todo.md

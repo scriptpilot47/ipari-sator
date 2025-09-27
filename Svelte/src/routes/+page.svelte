@@ -5,15 +5,17 @@
     import Timeline from "../components/Timeline.svelte";
     import BlogAll from '../components/BlogAll.svelte';
     import ContactUs from '../components/ContactUs.svelte';
+    import UseCase from '../components/UseCase.svelte';
     
     let { data }: PageProps = $props();
     console.log(data.blog)
 </script>
 <div class="">
     <Legend/>
+    <!-- <UseCase /> -->
     <Quickproducts data={data}/>
     <Timeline/>
-    <ContactUs /> 
+    <ContactUs/> 
     <div class="mt-40">
     <BlogAll  data={data}/>
     </div>
