@@ -10,7 +10,7 @@
 ## 1. Install
 #### Dev
 1. copy `pb_data` from the backup to `PocketBase/dev_DB/`
-1. #todo env files
+1. copy `.env.production` from the backup file to `Svelte/`
 1. build images and run containers:
     ```bash
     sudo docker compose -f docker-compose.yaml up --build
@@ -22,7 +22,7 @@
 0. git pull updates (#todo CI/CD)
 1. copy `pb_data` from the backup to `PocketBase/production_DB/`
 1. copy `letsencrypt` folder from backup to `shared-volumes` or manually run certbot-init to generate it
-1. #todo env files
+1. copy `.env` from the backup to `Svelte/`
 1. build images and run containers:
     ```bash
     sudo docker compose -f docker-compose.prod.yaml up --build -d
@@ -69,12 +69,17 @@ Nginx exposes the:
 Installs, builds and runs the backend server.
 
 #### PocketBase
-It's the exact copy of the Dev database in schemas and collections. But not in records. Auto migrates the files when codebase is updated.
+It's the exact copy of the Dev database in schemas and collections. But not in records. Auto migrates the files when codebase is updated. If we want to access the Pocketbase Web UI to update records, manually expose the `:8090` port in the `docker-compose.prod.yaml` file (and comment out when work is done) and access the UI with:
+
+```bash
+ssh -N -L 19090:localhost:8090 user@ip
+```
 
 #### Nginx
-Nginx redirect any HTTP traffic to HTTPS.
+Nginx redirect any HTTP traffic to HTTPS (except certbot challenge path).
 Nginx exposes the:
 - webapp on `/`
+
 _nothing else yet_
 
 ---
@@ -87,11 +92,20 @@ Certbot and HTTPS are only present in the production codebase.
 
 The certbot-renewal checks the certificate every 12 hours and renew it if the deadline is coming.
 
+
+```bash
+docker stop certbot-renewal-prod
+```
+_this is how we kill this service, since "compose down" won't stop this, because of the way we started it_
+
 #### Manualy run init:
+_this is only relevant if we don't have the backup files for the certificates_
+
 The certbot-init is needed to generate a certificate from zero, so it's skipped from running every time. Manually have to run it:
 
 ```bash
 # stop the services if running
+docker stop certbot-renewal-prod
 docker compose down -v
 
 # run certbot-init and nginx only
