@@ -10,17 +10,21 @@
 
   // mobile menu functions
   let width = $state(0)
-    function updateSize() {
+
+  function updateSize() {
     width = window.innerWidth;
     const drawerCheckbox = document.getElementById('my-drawer-3');
     if (width > 1024 && drawerCheckbox && drawerCheckbox.checked === true) {
       drawerCheckbox.checked = false;
+      document.body.style.backgroundColor = "var(--color-primary)"
     }
   }
 
   function closeMenu() {
    const drawerCheckbox = document.getElementById('my-drawer-3');
-    if (drawerCheckbox) drawerCheckbox.checked = false;
+    if (drawerCheckbox) {
+    drawerCheckbox.checked = false;
+    }
   }
     onMount(() => {
     updateSize(); // initial size
@@ -83,7 +87,7 @@
   </div>
   <div class="drawer-side">
     <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label>
-    <ul class="menu bg-base-200 min-h-full w-80 px-4 py-8 text-2xl">
+    <ul class="menu bg-base-200 min-h-full w-80 px-4 py-8 text-2xl rounded-r-2xl">
       <!-- Sidebar content here -->
       	<li><a href="/" class={`${page.url.pathname === '/' ? 'text-primary' : ''} active:!bg-transparent`} onclick={closeMenu}>Kezdőlap</a></li>
       	<li><a href="/products"class={`${page.url.pathname === '/products' ? 'text-primary' : ''} active:!bg-transparent`} onclick={closeMenu}>Termékek</a></li>
