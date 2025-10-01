@@ -35,6 +35,9 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+  <meta name="theme-color" content="#fdcf2b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#fdcf2b">
 </svelte:head>
 <div class="drawer min-h-screen bg-base-100">
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
