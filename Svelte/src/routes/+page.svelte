@@ -15,7 +15,7 @@
 <div class="">
     <Legend/>
     <!-- <div class="hidden lg:block mb-5"> -->
-    <div>
+    <div class="mb-20 hidden sm:block">
     <Stats />
     </div>
     <!-- <UseCase /> -->
