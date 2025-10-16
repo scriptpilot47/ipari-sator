@@ -72,7 +72,7 @@
 				<span class="italic">{' + afa'}</span>
 			</h3>
 		</div>
-		<p class="text-left">{description}</p>
+		<p class="text-left text-white/80">{description}</p>
 		<div class="card-actions justify-start">
 			<a href="/products/{id}" class="btn btn-accent hover:bg-primary uppercase"> megtekint </a>
 		</div>

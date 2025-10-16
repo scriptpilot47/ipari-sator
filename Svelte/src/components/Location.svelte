@@ -16,7 +16,7 @@
 	});
 </script>
 
-<div class="py-12 border-y-1">
+<div class="pb-12">
 
 <!-- image + map -->
 <div class="flex flex-col md:flex-row max-w-250 mx-auto ">

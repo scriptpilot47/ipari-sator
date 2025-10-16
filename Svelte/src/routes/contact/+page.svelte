@@ -5,11 +5,11 @@
 	let { data }: PageProps = $props();
 </script>
 
-<div>
-	<div class="max-w-250 mx-auto">
+<div class="flex flex-col justify-start max-w-250 mx-auto gap-7 md:gap-0 pt-5 md:pt-10">
+	<div class="order-2">
 		<Location />
 	</div>
-	<div class="max-w-250 mx-auto">
+	<div class="order-1">
 		<ul class="px-4 py-6 flex flex-col gap-3 text-lg md:text-xl">
 			<li>
 				☎️ <span class="font-semibold text-primary">Telefon:</span>

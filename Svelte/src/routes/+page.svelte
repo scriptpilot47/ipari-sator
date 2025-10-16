@@ -20,7 +20,9 @@
     </div>
     <!-- <UseCase /> -->
     <Quickproducts data={data}/>
+    <div class="mt-40">
     <Location />
+    </div>
     <Timeline/>
     <ContactUs/> 
     <div class="mt-40">
