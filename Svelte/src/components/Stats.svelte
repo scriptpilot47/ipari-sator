@@ -1,7 +1,7 @@
-<div class="stats stats-vertical lg:stats-horizontal shadow w-full bg-base-100">
+<div class="stats shadow w-full bg-base-100">
 
   <!-- Telepítési idő (accent) -->
-  <div class="stat">
+  <div class="stat hidden md:inline-grid px-[16px] lg:px-[24px]">
     <div class="stat-figure text-accent">
       <!-- Clock icon (outline) -->
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -12,12 +12,12 @@
       </svg>
     </div>
     <div class="stat-title">Telepítési idő</div>
-    <div class="stat-value text-white">2.5 nap</div>
-    <div class="stat-desc text-white">Gyors kivitelezés 1000 m²-ig</div>
+    <div class="stat-value text-xl lg:text-3xl text-white">2.5 nap</div>
+    <div class="stat-desc text-white text-wrap">Gyors kivitelezés 1000 m²-ig</div>
   </div>
 
   <!-- Költségmegtakarítás (primary) -->
-  <div class="stat">
+  <div class="stat hidden sm:inline-grid">
     <div class="stat-figure text-primary">
       <!-- Chart bars icon (outline) -->
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -27,12 +27,12 @@
       </svg>
     </div>
     <div class="stat-title">Költségmegtakarítás</div>
-    <div class="stat-value text-primary">–45%</div>
-    <div class="stat-desc text-white">A fix épületekhez képest</div>
+    <div class="stat-value text-xl lg:text-3xl text-primary">–45%</div>
+    <div class="stat-desc text-white text-wrap">A fix épületekhez képest</div>
   </div>
 
   <!-- Anyagminőség (accent) -->
-  <div class="stat">
+  <div class="stat hidden sm:inline-grid">
     <div class="stat-figure text-accent">
       <!-- Shield-check icon (outline) -->
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -44,12 +44,12 @@
       </svg>
     </div>
     <div class="stat-title">Anyagminőség</div>
-    <div class="stat-value text-white">Prémium</div>
-    <div class="stat-desc text-white">Tűz- és UV-álló ponyvák</div>
+    <div class="stat-value text-xl lg:text-3xl text-white">Prémium</div>
+    <div class="stat-desc text-white text-wrap">Tűz- és UV-álló ponyvák</div>
   </div>
 
   <!-- Környezeti hatás (success) -->
-  <div class="stat">
+  <div class="stat hidden md:inline-grid px-[16px] lg:px-[24px]">
     <div class="stat-figure text-success">
       <!-- Leaf icon (outline) -->
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -61,8 +61,8 @@
       </svg>
     </div>
     <div class="stat-title">Környezeti hatás</div>
-    <div class="stat-value text-success">–30%</div>
-    <div class="stat-desc text-success">CO₂-kibocsátás</div>
+    <div class="stat-value text-xl lg:text-3xl text-success">–30%</div>
+    <div class="stat-desc text-success text-wrap">CO₂-kibocsátás</div>
   </div>
 
 </div>

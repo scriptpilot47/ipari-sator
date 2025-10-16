@@ -14,7 +14,8 @@
 </script>
 <div class="">
     <Legend/>
-    <div class="hidden lg:block mb-5">
+    <!-- <div class="hidden lg:block mb-5"> -->
+    <div>
     <Stats />
     </div>
     <!-- <UseCase /> -->
