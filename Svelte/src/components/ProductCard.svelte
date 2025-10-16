@@ -57,9 +57,9 @@
 		<h2 class="card-title">
 			{title}
 			<div class={`badge badge-primary ${popular ? 'block' : 'hidden'} badge-sm sm:badge-md`}>
-				NEPSZERU
+				NÉPSZERŰ
 			</div>
-			<div class={`badge bg-red-500 ${sale ? 'block' : 'hidden'} badge-sm sm:badge-md`}>AKCIO</div>
+			<div class={`badge bg-red-500 ${sale ? 'block' : 'hidden'} badge-sm sm:badge-md`}>AKCIÓ</div>
 		</h2>
 		<div class="flex">
 			{#if sale}

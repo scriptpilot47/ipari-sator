@@ -36,15 +36,15 @@
         {/if}
         <!-- text -->
 		<h1 class="absolute bottom-4 left-4 text-lg sm:text-2xl text-white/70 drop-shadow-lg">
-			<span class="text-primary">Cim:</span> 2112 Veresegyhaz hajo utca 8.
+			<span class="text-primary">Cím:</span> 2112 Veresegyház hajó utca 8.
 		</h1>
 	</div>
 </div>
 
 <div class="max-w-250 mx-auto pt-8 px-3 flex flex-col md:flex-row md:items-center gap-5">
     <p class="text-xl md:text-2xl text-white/70">
-    Latogasson el telephelyunkre, ahol szemelyesen is megtekintheti termekunket. Elozetes idopont egyeztetes szukseges!
+    Látogasson el telephelyünkre, ahol személyesen is megtekintheti termékünket. Előzetes időpont egyeztetés szükséges!
     </p>
-    <button class="btn btn-primary md:my-4">Hivj most <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor"> <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path> </svg></button>
+    <a href="tel:+36204513320" class="btn btn-primary md:my-4">Hívj most <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor"> <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path> </svg></a>
 </div>
 </div>

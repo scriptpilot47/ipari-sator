@@ -74,7 +74,7 @@
           <!-- Navbar menu content here -->
       	<li><a href="/" class={`${page.url.pathname === '/' ? 'underline underline-offset-5 decoration-2' : ''} active:!bg-transparent focus:!bg-transparent active:!text-black hover:!bg-transparent`}>Kezdőlap</a></li>
       	<li><a href="/products"class={`${page.url.pathname === '/products' ? 'underline underline-offset-5 decoration-2' : ''} active:!bg-transparent focus:!bg-transparent active:!text-black hover:!bg-transparent`}>Termékek</a></li>
-      	<li><a href="/prices"class={`${page.url.pathname === '/prices' ? 'underline underline-offset-5 decoration-2' : ''} active:!bg-transparent focus:!bg-transparent active:!text-black hover:!bg-transparent`}>Arak</a></li>
+      	<li><a href="/prices"class={`${page.url.pathname === '/prices' ? 'underline underline-offset-5 decoration-2' : ''} active:!bg-transparent focus:!bg-transparent active:!text-black hover:!bg-transparent`}>Árak</a></li>
         <li><a href="/blog"class={`${page.url.pathname === '/blog' ? 'underline underline-offset-5 decoration-2' : ''} active:!bg-transparent focus:!bg-transparent active:!text-black hover:!bg-transparent`}>Blog</a></li>
       	<li><a href="/contact"class={`${page.url.pathname === '/contact' ? 'underline underline-offset-5 decoration-2' : ''} active:!bg-transparent focus:!bg-transparent active:!text-black hover:!bg-transparent`}>Kapcsolat</a></li>
         </ul>
@@ -91,7 +91,7 @@
       <!-- Sidebar content here -->
       	<li><a href="/" class={`${page.url.pathname === '/' ? 'text-primary' : ''} active:!bg-transparent`} onclick={closeMenu}>Kezdőlap</a></li>
       	<li><a href="/products"class={`${page.url.pathname === '/products' ? 'text-primary' : ''} active:!bg-transparent`} onclick={closeMenu}>Termékek</a></li>
-      	<li><a href="/prices"class={`${page.url.pathname === '/prices' ? 'text-primary' : ''} active:!bg-transparent`} onclick={closeMenu}>Arak</a></li>
+      	<li><a href="/prices"class={`${page.url.pathname === '/prices' ? 'text-primary' : ''} active:!bg-transparent`} onclick={closeMenu}>Árak</a></li>
         <li><a href="/blog"class={`${page.url.pathname === '/blog' ? 'text-primary' : ''} active:!bg-transparent`} onclick={closeMenu}>Blog</a></li>
       	<li><a href="/contact"class={`${page.url.pathname === '/contact' ? 'text-primary' : ''} active:!bg-transparent`} onclick={closeMenu}>Kapcsolat</a></li>
     </ul>

@@ -30,12 +30,12 @@
 				{#if data.details.is_sale}
 				<h1 class="text-2xl line-through text-red-500">
 					{data.details.sale_original_price.toLocaleString('hu-HU')}
-					<span class="font-normal italic">{' Ft. + afa'}</span>
+					<span class="font-normal italic">{' Ft. + áfa'}</span>
 				</h1>
 				{/if}
 				<h1 class="text-2xl">
 					{data.details.price_net_huf.toLocaleString('hu-HU')}
-					<span class="font-normal italic">{' Ft. + afa'}</span>
+					<span class="font-normal italic">{' Ft. + áfa'}</span>
 				</h1>
 				<!-- <h1>{data.details.is_stock}</h1> -->
 				<div class="mt-10 lg:mt-auto">
@@ -57,92 +57,92 @@
 			<ContactUs />
 		</div>
 		<div class="bg-base-200 mx-auto my-5 rounded-sm px-8 py-5 lg:my-10 lg:py-8"id="order-form">
-			<h1 class="text-2xl text-center mb-5">Megrendeles leadasa</h1>
+			<h1 class="text-2xl text-center mb-5">Megrendelés leadása</h1>
 			<form action="
 			" class="flex gap-4 flex-col lg:flex-row"> 
 			<div class="py-8 flex flex-col gap-3 lg:mx-0 w-full"> 
-				<h1 class="text-white/65 text-lg">Ceges adatok</h1> 
+				<h1 class="text-white/65 text-lg">Céges adatok</h1> 
 				<label class="floating-label"> 
-					<span>Cegnev</span> 
-					<input type="text" placeholder="Cegnev" class="input input-md w-full" /> 
+					<span>Cégnév</span> 
+					<input type="text" placeholder="Cégnév" class="input input-md w-full" /> 
 				</label> <label class="floating-label"> 
-					<span>Adoszam</span> 
-					<input type="text" placeholder="Adoszam" class="input input-md w-full" /> 
+					<span>Adószám</span> 
+					<input type="text" placeholder="Adószám" class="input input-md w-full" /> 
 				</label> <div class="flex gap-3 w-full"> 
 					<label class="floating-label w-full"> 
-						<span>Iranyitoszam</span> 
-						<input type="text" placeholder="Iranyitoszam" class="input input-md w-full" /> </label> 
+						<span>Irányítószám</span> 
+						<input type="text" placeholder="Irányítószám" class="input input-md w-full" /> </label> 
 						<label class="floating-label w-full"> 
-							<span>Telepules</span> 
-							<input type="text" placeholder="Telepules" class="input input-md w-full" /> 
+							<span>Település</span> 
+							<input type="text" placeholder="Település" class="input input-md w-full" /> 
 						</label> 
 					</div> 
 					<label class="floating-label"> 
-						<span>Cim</span> 
+						<span>Cím</span> 
 						<input type="text" placeholder="Cim" class="input input-md w-full" /> 
 					</label>
 				<span class="h-1"></span>
 				<h1 class="text-white/65 text-lg">Kapcsolat</h1>
 				<label class="floating-label">
-					<span>Teljes nev</span>
-					<input type="text" placeholder="Teljes nev" class="input input-md w-full" />
+					<span>Teljes név</span>
+					<input type="text" placeholder="Teljes név" class="input input-md w-full" />
 				</label>
 				<label class="floating-label">
 					<span>Email</span>
 					<input type="text" placeholder="Email" class="input input-md w-full" />
 				</label>
 				<label class="floating-label">
-					<span>Telefonszam</span>
-					<input type="text" placeholder="Telefonszam" class="input input-md w-full" />
+					<span>Telefonszám</span>
+					<input type="text" placeholder="Telefonszám" class="input input-md w-full" />
 				</label>
 			</div>
 			<!-- ############################################################## -->
 			<div class="py-8 flex flex-col gap-3 lg:mx-0 w-full">
-				<h1 class="text-white/65 text-lg">Szallitasi adatok</h1> 
+				<h1 class="text-white/65 text-lg">Szállítási adatok</h1> 
 				<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between bg-transparent rounded-box lg:p-4 lg:pl-0 w-full h-15 lg:h-10 rounded-sm">
   					<label class="label m-0 ">
     					<input type="checkbox" class="checkbox checkbox-primary" onchange={handleDeliveryChange} />
-						Kiszallitast kerek
+						Kiszállítást kérek
 						</label>
   					<label class="label m-0 ">
     					<input type="checkbox" class="checkbox checkbox-primary" disabled={!isDeliveryChecked}/>
-						<span class={`${deliveryFormColor}`}>Osszeszerelest kerek</span>
+						<span class={`${deliveryFormColor}`}>Összeszerelést kérek</span>
 						</label>
 				</div>
 				<div class="flex items-start lg:items-center justify-start bg-transparent rounded-box lg:p-4 lg:pl-0 w-full h-10 rounded-sm">
   					<label class={`label m-0 ${showAddressCopyCheckbox}`}>
     					<input type="checkbox" checked="checked" class="checkbox checkbox-primary" disabled={!isDeliveryChecked} onchange={handleAddressChange} />
-						<span class={`${deliveryFormColor}`}>A szallitasi es szamlazasi cim egyezik</span>
+						<span class={`${deliveryFormColor}`}>A szállítási és számlázási cím egyezik</span>
 						</label>
 				</div>
 				<div class="flex gap-3 w-full"> 
 					<label class={`floating-label w-full ${showAddressInputs}`}> 
-						<span>Iranyitoszam</span> 
-						<input type="text" placeholder="Iranyitoszam" class="input input-md w-full" /> </label> 
+						<span>Irányítószám</span> 
+						<input type="text" placeholder="Irányítószám" class="input input-md w-full" /> </label> 
 					<label class={`floating-label w-full ${showAddressInputs}`}> 
-							<span>Telepules</span> 
-							<input type="text" placeholder="Telepules" class="input input-md w-full" /> 
+							<span>Település</span> 
+							<input type="text" placeholder="Település" class="input input-md w-full" /> 
 						</label> 
 					</div> 
 					<label class={`floating-label w-full ${showAddressInputs}`}> 
-						<span>Cim</span> 
-						<input type="text" placeholder="Cim" class="input input-md w-full" /> 
+						<span>Cím</span> 
+						<input type="text" placeholder="Cím" class="input input-md w-full" /> 
 					</label>
 			</div>
 			</form>
 				<div class="flex items-start lg:items-center justify-start bg-transparent rounded-box p-4 pl-0 w-full h-10 rounded-sm">
   					<label class={`label m-0`}>
     					<input type="checkbox" class="checkbox checkbox-primary" onchange={handleAddressChange} />
-						<span>Elolvastam es elfogadom a szerzodesi felteteleket</span>
+						<span>Elolvastam és elfogadom a szerződési feltételeket</span>
 						</label>
 				</div>
 				<div class="flex items-start lg:items-center justify-start bg-transparent rounded-box p-4 pl-0 w-full h-10 rounded-sm mb-5">
   					<label class={`label m-0`}>
     					<input type="checkbox" class="checkbox checkbox-primary" onchange={handleAddressChange} />
-						<span>Feliratkozok a hirlevelre</span>
+						<span>Feliratkozok a hírlevélre</span>
 						</label>
 				</div>
-			<p class={`pb-6 text-red-400 ${showAddressCopyCheckbox}`}>Szallitasi es osszeszerelesi arainkrol <a href="/prices" class="underline">itt</a> tajekozodhat.</p>
+			<p class={`pb-6 text-red-400 ${showAddressCopyCheckbox}`}>Szállítási és összeszerelési árainkról <a href="/prices" class="underline">itt</a> tájékozódhat.</p>
 				<button class="btn btn-primary uppercase w-fit">megrendelem</button>
 		</div>
 	</div>

@@ -36,7 +36,7 @@
 </script>
 
   <div class="p-8 bg-base-200 border-y-1">
-    <Title text="Rendeles menete" extra="mt-10"/>
+    <Title text="Rendelés menete" extra="mt-10"/>
 <!-- <p>Scroll Position: {scrollPosition}</p> -->
 <ul class="timeline timeline-vertical">
 <TimelineItem 

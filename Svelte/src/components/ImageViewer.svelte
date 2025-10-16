@@ -42,7 +42,7 @@
 	<div class="max-w-150 mx-auto lg:mx-0">
 		<div class="breadcrumbs text-sm">
 			<ul>
-				<li class="underline"><a href="/products">Termekek</a></li>
+				<li class="underline"><a href="/products">Termékek</a></li>
 				<li class="underline">{title}</li>
 			</ul>
 		</div>

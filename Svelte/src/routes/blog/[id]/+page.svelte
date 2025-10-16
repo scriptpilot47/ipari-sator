@@ -35,7 +35,7 @@
 		</div>
 		<div class="flex items-center gap-3 mb-4">
 			<div class="bg-[#d9ddfd] text-[#2f48d2] text-sm md:text-[14px] rounded-2xl px-[12px] py-[4px] bold">
-			Raktarozas
+			Raktározás
 			</div>
 			<p>•</p>
 			<p>2025. szeptember 7.</p>

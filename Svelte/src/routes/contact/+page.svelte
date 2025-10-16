@@ -13,7 +13,7 @@
 		<ul class="px-4 py-6 flex flex-col gap-3 text-lg md:text-xl">
 			<li>
 				☎️ <span class="font-semibold text-primary">Telefon:</span>
-				<a href="tel:+36202345678" class="ml-2 font-medium hover:underline"> +36 20 234 5678 </a>
+				<a href="tel:+36204513320" class="ml-2 font-medium hover:underline"> +36 20 451 3320 </a>
 			</li>
 			<li>
 				✉️ <span class="font-semibold text-primary">E-mail:</span>

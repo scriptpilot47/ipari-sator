@@ -19,17 +19,17 @@
       </tr>
       <!-- row 2 -->
       <tr>
-        <td>Szin</td>
+        <td>Szín</td>
         <td>{color}</td>
       </tr>
       <!-- row 3 -->
       <tr>
-        <td>Terulet</td>
+        <td>Terület</td>
         <td>{area}</td>
       </tr>
       <!-- row 4 -->
       <tr>
-        <td>Meret (SZ,H,M)</td>
+        <td>Méret (SZ,H,M)</td>
         <td>{dimensions}</td>
       </tr>
     </tbody>
