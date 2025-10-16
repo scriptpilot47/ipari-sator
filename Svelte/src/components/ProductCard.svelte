@@ -69,7 +69,7 @@
 			{/if}
 			<h3 class={`mb-2 mr-4 text-left`}>
 				{price.toLocaleString('hu-HU') + 'Ft.'}
-				<span class="italic">{' + afa'}</span>
+				<span class="italic">{' + áfa'}</span>
 			</h3>
 		</div>
 		<p class="text-left text-white/80">{description}</p>

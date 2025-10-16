@@ -17,8 +17,8 @@
 			</li>
 			<li>
 				✉️ <span class="font-semibold text-primary">E-mail:</span>
-				<a href="mailto:iparisator@gmail.com" class="ml-2 hover:text-yellow-400 transition">
-					iparisator@gmail.com
+				<a href="mailto:iparisatorbusiness@gmail.com" class="ml-2 hover:text-yellow-400 transition">
+					iparisatorbusiness@gmail.com
 				</a>
 			</li>
 			<li>

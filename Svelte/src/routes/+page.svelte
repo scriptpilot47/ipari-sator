@@ -20,7 +20,7 @@
     </div>
     <!-- <UseCase /> -->
     <Quickproducts data={data}/>
-    <div class="mt-40">
+    <div class="mt-20 sm:mt-40">
     <Location />
     </div>
     <Timeline/>

@@ -1,8 +1,8 @@
 <footer class="footer sm:footer-horizontal bg-primary text-primary-content p-10">
   <nav>
     <h6 class="footer-title">Kapcsolat</h6>
-    <a class="link link-hover">+36 20 451 3320</a>
-    <a class="link link-hover">iparisator@gmail.com</a>
+    <a href="tel:+36204513320"class="link link-hover">+36 20 451 3320</a>
+    <a href="mailto:iparisatorbusiness@gmail.com" class="link link-hover">iparisatorbusiness@gmail.com</a>
     <a class="link link-hover">2112 Veresegyház hajó utca 8.</a>
   </nav>
   <nav>
