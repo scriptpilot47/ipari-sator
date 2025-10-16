@@ -6,6 +6,7 @@
     import BlogAll from '../components/BlogAll.svelte';
     import ContactUs from '../components/ContactUs.svelte';
     import UseCase from '../components/UseCase.svelte';
+    import Location from '../components/Location.svelte';
     
     let { data }: PageProps = $props();
     console.log(data.blog)
@@ -14,6 +15,7 @@
     <Legend/>
     <!-- <UseCase /> -->
     <Quickproducts data={data}/>
+    <Location />
     <Timeline/>
     <ContactUs/> 
     <div class="mt-40">

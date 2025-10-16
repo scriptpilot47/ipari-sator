@@ -22,4 +22,7 @@
         {/each}
       {/if}
   </div>
+  <div class="px-2 py-8">
+  <a href="/products" class="underline">Osszes termek</a>
+  </div>
 </div>

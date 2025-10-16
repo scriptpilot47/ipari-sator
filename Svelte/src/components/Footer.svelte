@@ -1,20 +1,17 @@
 <footer class="footer sm:footer-horizontal bg-primary text-primary-content p-10">
   <nav>
-    <h6 class="footer-title">Services</h6>
-    <a class="link link-hover">Branding</a>
-    <a class="link link-hover">Design</a>
-    <a class="link link-hover">Marketing</a>
-    <a class="link link-hover">Advertisement</a>
+    <h6 class="footer-title">Kapcsolat</h6>
+    <a class="link link-hover">+36 30 123 4567</a>
+    <a class="link link-hover">iparisator@gmail.com</a>
+    <a class="link link-hover">2112 Veresegyhaz hajo utca 8.</a>
   </nav>
   <nav>
-    <h6 class="footer-title">Company</h6>
-    <a class="link link-hover">About us</a>
-    <a class="link link-hover">Contact</a>
-    <a class="link link-hover">Jobs</a>
-    <a class="link link-hover">Press kit</a>
+    <h6 class="footer-title">Jogi</h6>
+    <a class="link link-hover">ASZF</a>
+    <a class="link link-hover">Adatvedelem</a>
   </nav>
   <nav>
-    <h6 class="footer-title">Social</h6>
+    <h6 class="footer-title">Kovess minket</h6>
     <div class="grid grid-flow-col gap-4">
       <a>
         <svg
