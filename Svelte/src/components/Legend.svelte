@@ -22,8 +22,13 @@
   {/if}
   <img src="legend.png" alt="Legend" class={`w-full 2xl:w-[1100px] h-full object-cover ${loaded ? '' : 'hidden'}`} bind:this={imageRef} onload={onLoad} />
   <div class="absolute 2xl:relative inset-0 bg-black/10 2xl:bg-black/0 flex 2xl:flex-col items-start justify-end p-6 sm:p-10 lg:p-25">
-    <h1 class="text-[#eeeeee] 2xl:text-base-content text-2xl sm:text-4xl md:text-5xl font-bold text-right 2xl:text-left leading-tight">
-      FOLYAMATOS<br>VEDELEM<br />NYUJT
+    <h1 class="text-[#eeeeee] 2xl:text-base-content text-2xl sm:text-4xl md:text-5xl font-bold text-right 2xl:text-left leading-tight uppercase">
+      <!-- FOLYAMATOS<br>VEDELEM<br />NYUJT -->
+      Időjárásálló
+      <br>
+      védelmet
+      <br/>
+      adunk
     </h1>
     <!-- newsletter -->
   <div class="hidden 2xl:flex join mt-15">

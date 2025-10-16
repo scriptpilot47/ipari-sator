@@ -12,8 +12,8 @@
       </svg>
     </div>
     <div class="stat-title">Telepítési idő</div>
-    <div class="stat-value text-accent">2.5 nap</div>
-    <div class="stat-desc text-accent">Gyors kivitelezés 1000 m²-ig</div>
+    <div class="stat-value text-white">2.5 nap</div>
+    <div class="stat-desc text-white">Gyors kivitelezés 1000 m²-ig</div>
   </div>
 
   <!-- Költségmegtakarítás (primary) -->
@@ -28,7 +28,7 @@
     </div>
     <div class="stat-title">Költségmegtakarítás</div>
     <div class="stat-value text-primary">–45%</div>
-    <div class="stat-desc">A fix épületekhez képest</div>
+    <div class="stat-desc text-white">A fix épületekhez képest</div>
   </div>
 
   <!-- Anyagminőség (accent) -->
@@ -44,8 +44,8 @@
       </svg>
     </div>
     <div class="stat-title">Anyagminőség</div>
-    <div class="stat-value text-accent">Prémium</div>
-    <div class="stat-desc text-accent">Tűz- és UV-álló ponyvák</div>
+    <div class="stat-value text-white">Prémium</div>
+    <div class="stat-desc text-white">Tűz- és UV-álló ponyvák</div>
   </div>
 
   <!-- Környezeti hatás (success) -->

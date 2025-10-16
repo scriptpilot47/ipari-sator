@@ -5,7 +5,7 @@
   let { data }: { data: PageData } = $props();
 </script>
 <div class="p-8">
-  <Title text="Kiemelt termekeink" extra='mb-3 2xl:text-left'/>
+  <Title text="Kiemelt termekeink" extra='mb-3 2xl:text-left text-accent!'/>
   <div class="flex flex-col md:flex-row items-center justify-center 2xl:justify-start gap-20 lg:gap-10 sm:gap-5">
       {#if data?.products}
         {#each data.products as product}
