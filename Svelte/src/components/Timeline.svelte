@@ -39,9 +39,40 @@
     <Title text="Rendeles menete" extra="mt-10"/>
 <!-- <p>Scroll Position: {scrollPosition}</p> -->
 <ul class="timeline timeline-vertical">
-    <TimelineItem title={'Rendeles leadasa'} description={'Add le rendelesedet az altalat valasztott termekre. Ha meg kerdesed maradt, nyugodtan telefonalj kollegainknak, akik segitenek a megfelelo sator kivalasztasaban.'} filled={scrollPosition >  timelineStartPoint ? true : false}  position={'start'} first={true} last={false}/>
-    <TimelineItem title={'Beszerzes megkezdese'} description='A visszaigazolo email erkezese utan nincs mas dolgod mint varni, amig mi beszerezzuk a termeket' filled={scrollPosition > timelineStartPoint + 400 ? true : false} position={'end'} first={false} last={false}/>
-    <TimelineItem title={'Termek atveheto'} description='Amint beerkezett hozzank, ertesitunk emailben es SMS-ben is.' filled={scrollPosition > timelineStartPoint + 850 ? true : false} position={'start'} first={false} last={false}/>
-    <TimelineItem title={'Kiszallitas es osszeszereles (opcionalis)'} description='Amennyiben ezt az opciot is kerted a termek rendelesnel, csapatunk az elore egyeztetett idopontban kiszallitja es osszerakja a satrat.' filled={scrollPosition > timelineStartPoint + 1300 ? true : false} position={'end'} first={false} last={true}/>
+<TimelineItem 
+  title="Rendelés leadása" 
+  description="Válaszd ki a terméket, és add le rendelésed online vagy telefonon." 
+  filled={scrollPosition > timelineStartPoint}
+  position="start" 
+  first={true} 
+  last={false}
+/>
+
+<TimelineItem 
+  title="Fizetés és beszerzés" 
+  description="A visszaigazoló e-mail után utald el az összeget, és elindítjuk a beszerzést." 
+  filled={scrollPosition > timelineStartPoint + 400} 
+  position="end" 
+  first={false} 
+  last={false}
+/>
+
+<TimelineItem 
+  title="Termék átvétele" 
+  description="Ha megérkezett, e-mailben és SMS-ben értesítünk az átvételről." 
+  filled={scrollPosition > timelineStartPoint + 850} 
+  position="start" 
+  first={false} 
+  last={false}
+/>
+
+<TimelineItem 
+  title="Kiszállítás és összeszerelés" 
+  description="Ha ezt kérted, csapatunk kiszállítja és összeszereli a sátrat egyeztetett időpontban." 
+  filled={scrollPosition > timelineStartPoint + 1300} 
+  position="end" 
+  first={false} 
+  last={true}
+/>
 </ul>
   </div>
